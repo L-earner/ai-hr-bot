@@ -1,0 +1,22 @@
+run = "cd ai-hr-app && npm run build && npm run preview -- --host --port 5173"
+entrypoint = "ai-hr-app/src/App.jsx"
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_11"
+packages = ["cowsay"]
+
+[agent]
+expertMode = true
+
+[[ports]]
+localPort = 5173
+externalPort = 80
+
+[[ports]]
+localPort = 5174
+externalPort = 3000
+
+[deployment]
+deploymentTarget = "cloudrun"
+run = ["sh", "-c", "cd ai-hr-app && npm run build && npm run preview -- --host --port 5173"]
