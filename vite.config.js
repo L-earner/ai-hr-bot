@@ -6,6 +6,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    allowedHosts: ['.replit.dev'],
+    allowedHosts: ['.replit.dev', '.replit.app'],
+  },
+  preview: {
+    host: '0.0.0.0',
+    allowedHosts: ['.replit.dev', '.replit.app'],
   },
 })
