@@ -106,3 +106,56 @@
   align-items: center;
   gap: 4px;
 }
+
+/* Responsive styles for Sidebar */
+
+/* Tablets (768px - 1024px) - Narrower sidebar */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .logo-text {
+    font-size: 13px;
+  }
+
+  .nav-item {
+    padding: 10px 12px;
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .sidebar-footer {
+    padding: 16px;
+  }
+
+  .user-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .user-name {
+    font-size: 12px;
+  }
+
+  .user-points {
+    font-size: 11px;
+  }
+}
+
+/* Mobile (< 768px) - Overlay sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Very small mobile (< 480px) - Full width overlay */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    max-width: 280px;
+  }
+}

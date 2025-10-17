@@ -278,3 +278,147 @@
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(107, 79, 187, 0.3);
 }
+
+/* Responsive styles for ChallengeOverview */
+
+/* Small laptops (1024px - 1440px) */
+@media (max-width: 1440px) {
+  .overview-content,
+  .application-content {
+    max-width: 100%;
+    padding: 28px;
+  }
+
+  .integration-cards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .challenge-title {
+    font-size: 28px;
+  }
+
+  .header-content {
+    left: 24px;
+    bottom: 20px;
+  }
+
+  .tabs {
+    padding: 20px 24px 0;
+  }
+
+  .overview-content,
+  .application-content {
+    padding: 24px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+  }
+
+  .integration-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+  .header-image {
+    height: 160px;
+  }
+
+  .challenge-title {
+    font-size: 24px;
+  }
+
+  .header-content {
+    left: 20px;
+    bottom: 16px;
+  }
+
+  .tabs {
+    padding: 16px 20px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .overview-content,
+  .application-content {
+    padding: 20px;
+  }
+
+  .section {
+    margin-bottom: 32px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .integration-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Very small mobile (< 480px) */
+@media (max-width: 480px) {
+  .header-image {
+    height: 140px;
+  }
+
+  .challenge-title {
+    font-size: 20px;
+  }
+
+  .challenge-due {
+    font-size: 12px;
+  }
+
+  .header-content {
+    left: 16px;
+    bottom: 12px;
+  }
+
+  .tabs {
+    padding: 12px 16px 0;
+  }
+
+  .tab {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .overview-content,
+  .application-content {
+    padding: 16px;
+  }
+
+  .section h2 {
+    font-size: 18px;
+  }
+
+  .subsection h3 {
+    font-size: 15px;
+  }
+
+  .integration-card,
+  .feature-item {
+    padding: 16px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

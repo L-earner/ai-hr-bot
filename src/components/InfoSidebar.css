@@ -146,3 +146,19 @@
   font-size: 12px;
   color: var(--text-secondary);
 }
+
+/* Responsive styles for InfoSidebar */
+
+/* Only show on very large screens (1440px+) */
+@media (max-width: 1440px) {
+  .info-sidebar {
+    display: none;
+  }
+}
+
+/* If we want to show it on large screens, ensure it's properly sized */
+@media (min-width: 1441px) {
+  .info-sidebar {
+    display: block;
+  }
+}

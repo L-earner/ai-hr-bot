@@ -367,8 +367,20 @@
   box-shadow: 0 4px 12px rgba(107, 79, 187, 0.3);
 }
 
-@media (max-width: 1280px) {
+/* Responsive breakpoints for better small laptop support */
+
+/* Large laptops and desktops (1440px+) - Full layout */
+@media (min-width: 1441px) {
   .main-content {
+    margin-left: 280px;
+    margin-right: 320px;
+  }
+}
+
+/* Small laptops (1024px - 1440px) - Hide right sidebar, keep left */
+@media (max-width: 1440px) {
+  .main-content {
+    margin-left: 280px;
     margin-right: 0;
   }
 
@@ -377,6 +389,25 @@
   }
 }
 
+/* Tablets (768px - 1024px) - Narrower left sidebar */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-left: 220px;
+    margin-right: 0;
+  }
+
+  .placeholder-content,
+  .overview-content,
+  .application-content {
+    padding: 24px;
+  }
+}
+
+/* Mobile and small tablets (< 768px) - Hide sidebars */
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;
@@ -386,9 +417,65 @@
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    z-index: 1000;
   }
 
   .sidebar.open {
     transform: translateX(0);
+  }
+
+  .placeholder-content {
+    padding: 20px;
+  }
+
+  .placeholder-content h1 {
+    font-size: 28px;
+  }
+
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-list {
+    padding: 0 16px;
+  }
+}
+
+/* Very small mobile (< 480px) */
+@media (max-width: 480px) {
+  .placeholder-content {
+    padding: 16px;
+  }
+
+  .placeholder-content h1 {
+    font-size: 24px;
+  }
+
+  .learn-grid,
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bounty-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bounty-reward {
+    align-self: flex-end;
+  }
+
+  .notification-item {
+    padding: 16px;
+  }
+
+  .leaderboard-item .rank {
+    min-width: 40px;
+    font-size: 18px;
+  }
+
+  .leaderboard-item .name {
+    font-size: 16px;
   }
 }

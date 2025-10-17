@@ -1,4 +1,4 @@
-import { Home, Bell, BookOpen, Gift, Trophy, Users, Gamepad2, Target } from 'lucide-react';
+import { Home, Bell, BookOpen, Gift, Users, Gamepad2 } from 'lucide-react';
 import './Sidebar.css';
 
 const Sidebar = ({ activeSection, onSectionChange }) => {
@@ -7,8 +7,6 @@ const Sidebar = ({ activeSection, onSectionChange }) => {
     { id: 'notifications', label: 'Notifications', icon: Bell },
     { id: 'learn', label: 'Learn', icon: BookOpen },
     { id: 'bounties', label: 'Bounties', icon: Gift },
-    { id: 'challenges', label: 'Challenges', icon: Target },
-    { id: 'leaderboard', label: 'Leaderboard', icon: Trophy },
     { id: 'directory', label: 'Directory', icon: Users },
     { id: 'games', label: 'Games', icon: Gamepad2 },
   ];
@@ -17,8 +15,8 @@ const Sidebar = ({ activeSection, onSectionChange }) => {
     <div className="sidebar">
       <div className="sidebar-header">
         <div className="logo-container">
-          <div className="logo-icon">🏢</div>
-          <span className="logo-text">National AI Centre/</span>
+          <div className="logo-icon">🤖</div>
+          <span className="logo-text">AI for Everyone</span>
         </div>
       </div>
 
